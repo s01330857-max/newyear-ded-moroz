@@ -1,24 +1,81 @@
+body {
+  margin: 0;
+  font-family: 'Inter', Arial, sans-serif;
+  background: #0b1220;
+  color: #fff;
+}
+
+/* HERO */
 .hero {
   height: 100vh;
   background: url("../assets/hero.jpg") center/cover no-repeat;
-  position: relative;
 }
 
+.overlay {
+  background: rgba(0,0,0,0.55);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 40px;
+  max-width: 700px;
+}
+
+button {
+  background: linear-gradient(135deg, #ff3b3b, #ff9a3b);
+  border: none;
+  padding: 14px 32px;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* BENEFITS */
 .benefits {
   display: flex;
   justify-content: center;
   gap: 20px;
-  padding: 30px;
+  padding: 25px;
   background: #111830;
+  font-size: 15px;
 }
 
-.benefit {
-  text-align: center;
-  max-width: 160px;
+/* CARD */
+.card {
+  max-width: 420px;
+  margin: 40px auto;
+  background: #151c36;
+  border-radius: 20px;
+  padding: 25px;
 }
 
-.benefit img {
+.card input,
+.card select {
   width: 100%;
-  border-radius: 14px;
-  margin-bottom: 10px;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  border: none;
+}
+
+.small {
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+.hidden {
+  display: none;
+}
+
+img {
+  width: 200px;
+  display: block;
+  margin: 20px auto;
 }
