@@ -54,9 +54,12 @@ p p {
   background: linear-gradient(135deg, #ff3b3b, #ff9a3b);
   border: none;
   border-radius: 999px;
-  padding: 14px 34px;
-  font-size: 16px;
+  padding: 16px 38px;
+  font-size: 17px;
+  font-weight: 600;
   color: #fff;
+  cursor: pointer;
+  box-shadow: 0 12px 30px rgba(255, 90, 60, 0.35);
 }
 
 /* TEXT */
@@ -115,6 +118,7 @@ input, select {
   inset: 0;
   pointer-events: none;
 }
+
 
 
 
