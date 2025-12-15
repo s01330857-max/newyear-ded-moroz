@@ -188,6 +188,12 @@ input, select {
 }
 
 
+.slots {
+  margin-top: 12px;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
 
 
 
