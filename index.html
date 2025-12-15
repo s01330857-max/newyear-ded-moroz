@@ -2,74 +2,55 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Дед Мороз и Снегурочка — Новогоднее чудо</title>
+  <title>Новогоднее поздравление от Деда Мороза</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-overlay">
     <h1>Новогоднее чудо у вас дома 🎄</h1>
-    <p>Настоящий Дед Мороз и Снегурочка — в удобное время</p>
+    <p>Дед Мороз и Снегурочка в удобное время</p>
     <button class="primary" onclick="startBooking()">Забронировать</button>
   </div>
 </section>
 
-<!-- BENEFITS -->
 <section class="benefits">
-  <div>🎅 Настоящие костюмы</div>
-  <div>❄️ Именное поздравление</div>
-  <div>📸 Фото на память</div>
+  <div class="benefit">
+    <img src="assets/benefit1.jpg">
+    <span>Настоящие костюмы</span>
+  </div>
+  <div class="benefit">
+    <img src="assets/benefit2.jpg">
+    <span>Именное поздравление</span>
+  </div>
+  <div class="benefit">
+    <img src="assets/benefit3.jpg">
+    <span>Живые эмоции</span>
+  </div>
 </section>
 
-<!-- BOOKING CARD -->
 <section class="card hidden" id="bookingCard">
-
   <h2>Бронирование</h2>
-
-  <div class="step">
-    <label>Дата</label>
-    <input type="date" id="date">
-  </div>
-
-  <div class="step">
-    <label>Время</label>
-    <select id="time">
-      <option>12:00</option>
-      <option>13:00</option>
-      <option>14:00</option>
-      <option>15:00</option>
-      <option>16:00</option>
-      <option>17:00</option>
-      <option>18:00</option>
-    </select>
-  </div>
-
-  <div class="step">
-    <label>Адрес</label>
-    <input type="text" id="address" placeholder="Улица, дом, квартира">
-  </div>
-
-  <div class="step inline">
-    <input type="text" id="name" placeholder="Ваше имя">
-    <input type="tel" id="phone" placeholder="Телефон">
-  </div>
-
-  <div class="step">
-    <input type="text" id="child" placeholder="Имя ребёнка">
-  </div>
-
-  <button class="primary full" onclick="confirmBooking()">Перейти к оплате</button>
+  <input type="date" id="date">
+  <select id="time">
+    <option>14:00</option>
+    <option>15:00</option>
+    <option>16:00</option>
+    <option>17:00</option>
+  </select>
+  <input type="text" id="address" placeholder="Адрес">
+  <input type="text" id="name" placeholder="Ваше имя">
+  <input type="tel" id="phone" placeholder="Телефон">
+  <input type="text" id="child" placeholder="Имя ребёнка">
+  <button class="primary full" onclick="confirmBooking()">К оплате</button>
 </section>
 
-<!-- PAYMENT -->
 <section class="card hidden" id="paymentCard">
   <h2>Оплата</h2>
-  <p>Отсканируйте QR-код</p>
-  <img id="qrImage" src="assets/qr.png">
-  <p class="small">После оплаты мы сразу подтвердим бронь</p>
+  <img src="assets/qr.png" id="qrImage">
+  <p class="small">После оплаты мы подтвердим заказ</p>
 </section>
 
 <script src="js/app.js"></script>
