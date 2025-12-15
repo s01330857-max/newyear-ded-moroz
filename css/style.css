@@ -43,9 +43,10 @@ p p {
 }
 
 .trust {
-  font-size: 14px;
-  opacity: 0.85;
-  margin: 12px 0 20px;
+  font-size: 15px;
+  font-weight: 500;
+  opacity: 0.9;
+  margin: 16px 0 26px;
 }
 
 /* BUTTON */
@@ -114,5 +115,6 @@ input, select {
   inset: 0;
   pointer-events: none;
 }
+
 
 
