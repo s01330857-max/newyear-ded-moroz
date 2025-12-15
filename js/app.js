@@ -1,46 +1,60 @@
+// ===== SLOTS =====
+let slots = 7;
+
+function updateSlots() {
+  const el = document.getElementById("slotsInfo");
+  if (el) {
+    el.innerHTML = `⏳ Осталось <strong>${slots}</strong> свободных слотов`;
+  }
+}
+
+updateSlots();
+
+// ===== BOOKING =====
 function startBooking() {
-  document.getElementById("bookingCard").classList.remove("hidden");
-  document.getElementById("bookingCard")
-    .scrollIntoView({ behavior: "smooth" });
+  const card = document.getElementById("bookingCard");
+  if (!card) return;
+
+  card.classList.remove("hidden");
+  card.scrollIntoView({ behavior: "smooth" });
 
   const sound = document.getElementById("bgSound");
-  sound.volume = 0.15;
-  sound.play().catch(() => {});
+  if (sound) {
+    sound.volume = 0.15;
+    sound.play().catch(() => {});
+  }
 }
 
 function confirmBooking() {
+  const bookingCard = document.getElementById("bookingCard");
+  const paymentCard = document.getElementById("paymentCard");
+
+  if (bookingCard) bookingCard.classList.add("hidden");
+  if (paymentCard) paymentCard.classList.remove("hidden");
+
+  if (slots > 0) {
+    slots--;
+    updateSlots();
+  }
+
+  // сохранение заявки (опционально)
   const booking = {
-    date: date.value,
-    time: time.value,
-    address: address.value,
-    name: name.value,
-    phone: phone.value,
-    child: child.value
+    date: document.getElementById("date")?.value,
+    time: document.getElementById("time")?.value,
+    address: document.getElementById("address")?.value,
+    name: document.getElementById("name")?.value,
+    phone: document.getElementById("phone")?.value,
+    child: document.getElementById("child")?.value
   };
 
   const bookings = JSON.parse(localStorage.getItem("bookings")) || [];
   bookings.push(booking);
   localStorage.setItem("bookings", JSON.stringify(bookings));
-
-  document.getElementById("bookingCard").classList.add("hidden");
-  document.getElementById("paymentCard").classList.remove("hidden");
 }
 
+// ===== QR FROM ADMIN =====
 const qr = localStorage.getItem("qr");
-if (qr) document.getElementById("qrImage").src = qr;
-
-let slots = 7;
-
-function updateSlots() {
-  const el = document.getElementById("slotsInfo");
-  if (el) el.innerHTML = `⏳ Осталось <strong>${slots}</strong> свободных слотов`;
-}
-
-updateSlots();
-
-function confirmBooking() {
-  if (slots > 0) slots--;
-  updateSlots();
-
-  // существующий код бронирования ниже
+if (qr) {
+  const qrImage = document.getElementById("qrImage");
+  if (qrImage) qrImage.src = qr;
 }
