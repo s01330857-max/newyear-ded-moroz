@@ -28,3 +28,19 @@ function confirmBooking() {
 
 const qr = localStorage.getItem("qr");
 if (qr) document.getElementById("qrImage").src = qr;
+
+let slots = 7;
+
+function updateSlots() {
+  const el = document.getElementById("slotsInfo");
+  if (el) el.innerHTML = `⏳ Осталось <strong>${slots}</strong> свободных слотов`;
+}
+
+updateSlots();
+
+function confirmBooking() {
+  if (slots > 0) slots--;
+  updateSlots();
+
+  // существующий код бронирования ниже
+}
