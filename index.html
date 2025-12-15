@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Дед Мороз и Снегурочка — Новогоднее поздравление</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="hero">
+  <h1>🎄 Новогоднее поздравление от Деда Мороза и Снегурочки</h1>
+  <p>Прямо у вас дома — в удобное время</p>
+  <button onclick="openBooking()">Забронировать</button>
+</header>
+
+<section class="features">
+  <div>✔ Именное поздравление</div>
+  <div>✔ Игры и стихи</div>
+  <div>✔ Вручение подарка</div>
+  <div>✔ Фото на память</div>
+</section>
+
+<section id="booking" class="booking hidden">
+  <h2>Бронирование</h2>
+
+  <label>Дата</label>
+  <input type="date" id="date">
+
+  <label>Время</label>
+  <select id="time">
+    <option>10:00</option>
+    <option>11:00</option>
+    <option>12:00</option>
+    <option>13:00</option>
+    <option>14:00</option>
+    <option>15:00</option>
+    <option>16:00</option>
+    <option>17:00</option>
+    <option>18:00</option>
+  </select>
+
+  <label>Адрес</label>
+  <input type="text" id="address" placeholder="Город, улица, дом, квартира">
+
+  <label>Имя родителя</label>
+  <input type="text" id="name">
+
+  <label>Телефон</label>
+  <input type="tel" id="phone">
+
+  <label>Имя ребёнка</label>
+  <input type="text" id="child">
+
+  <button onclick="confirmBooking()">Подтвердить и оплатить</button>
+</section>
+
+<section id="payment" class="hidden payment">
+  <h2>Оплата</h2>
+  <p>Отсканируйте QR-код для оплаты</p>
+  <img id="qrImage" src="assets/qr.png" alt="QR код">
+  <p>После оплаты мы свяжемся с вами в течение 10 минут</p>
+</section>
+
+<script src="js/app.js"></script>
+</body>
+</html>
