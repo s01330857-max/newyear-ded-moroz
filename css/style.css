@@ -72,26 +72,30 @@ p p {
 
 /* CARD */
 .card {
-  max-width: 420px;
-  margin: 40px auto;
+  max-width: 440px;
+  margin: 50px auto;
   background: #151c36;
-  border-radius: 22px;
-  padding: 24px;
+  border-radius: 26px;
+  padding: 28px;
 }
 
 .card h2 {
   text-align: center;
-  margin-bottom: 16px;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
 }
 
 /* FORM */
 input, select {
   width: 100%;
-  padding: 14px;
-  border-radius: 14px;
+  padding: 16px;
+  border-radius: 16px;
   border: none;
-  margin-bottom: 12px;
-  font-size: 15px;
+  margin-bottom: 14px;
+  font-size: 16px;
+  background: #ffffff;
+  color: #000000;
 }
 
 .inline {
@@ -118,6 +122,7 @@ input, select {
   inset: 0;
   pointer-events: none;
 }
+
 
 
 
