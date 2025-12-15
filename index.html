@@ -9,26 +9,17 @@
 <body>
 
 <section class="hero">
-  <div class="hero-overlay">
+  <div class="overlay">
     <h1>Новогоднее чудо у вас дома 🎄</h1>
-    <p>Дед Мороз и Снегурочка в удобное время</p>
-    <button class="primary" onclick="startBooking()">Забронировать</button>
+    <p>Настоящий Дед Мороз и Снегурочка в удобное время</p>
+    <button onclick="startBooking()">Забронировать</button>
   </div>
 </section>
 
 <section class="benefits">
-  <div class="benefit">
-    <img src="assets/benefit1.jpg">
-    <span>Настоящие костюмы</span>
-  </div>
-  <div class="benefit">
-    <img src="assets/benefit2.jpg">
-    <span>Именное поздравление</span>
-  </div>
-  <div class="benefit">
-    <img src="assets/benefit3.jpg">
-    <span>Живые эмоции</span>
-  </div>
+  <span>🎅 Настоящие костюмы</span>
+  <span>❄️ Именное поздравление</span>
+  <span>📸 Фото на память</span>
 </section>
 
 <section class="card hidden" id="bookingCard">
@@ -44,7 +35,7 @@
   <input type="text" id="name" placeholder="Ваше имя">
   <input type="tel" id="phone" placeholder="Телефон">
   <input type="text" id="child" placeholder="Имя ребёнка">
-  <button class="primary full" onclick="confirmBooking()">К оплате</button>
+  <button onclick="confirmBooking()">К оплате</button>
 </section>
 
 <section class="card hidden" id="paymentCard">
