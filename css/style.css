@@ -4,10 +4,12 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Inter', Arial;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', Arial;
   background: #0b1220;
-  color: #fff;
+  color: #ffffff;
+  line-height: 1.4;
 }
+
 
 /* HERO */
 .hero {
@@ -108,3 +110,4 @@ input, select {
   inset: 0;
   pointer-events: none;
 }
+
