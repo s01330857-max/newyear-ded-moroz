@@ -1,6 +1,11 @@
 function startBooking() {
   document.getElementById("bookingCard").classList.remove("hidden");
-  document.getElementById("bookingCard").scrollIntoView({ behavior: "smooth" });
+  document.getElementById("bookingCard")
+    .scrollIntoView({ behavior: "smooth" });
+
+  const sound = document.getElementById("bgSound");
+  sound.volume = 0.15;
+  sound.play().catch(() => {});
 }
 
 function confirmBooking() {
@@ -13,7 +18,7 @@ function confirmBooking() {
     child: child.value
   };
 
-  let bookings = JSON.parse(localStorage.getItem("bookings")) || [];
+  const bookings = JSON.parse(localStorage.getItem("bookings")) || [];
   bookings.push(booking);
   localStorage.setItem("bookings", JSON.stringify(bookings));
 
@@ -22,6 +27,4 @@ function confirmBooking() {
 }
 
 const qr = localStorage.getItem("qr");
-if (qr) {
-  document.getElementById("qrImage").src = qr;
-}
+if (qr) document.getElementById("qrImage").src = qr;
