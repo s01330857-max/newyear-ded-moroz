@@ -137,6 +137,36 @@ input, select {
   margin: 20px auto;
 }
 
+.info {
+  max-width: 640px;
+  margin: 40px auto;
+  padding: 0 24px;
+  text-align: left;
+}
+
+.info h2 {
+  font-size: 22px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.info li {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.note {
+  margin-top: 14px;
+  font-size: 14px;
+  opacity: 0.85;
+  text-align: center;
+}
+
 
 
 
