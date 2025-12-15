@@ -1,5 +1,6 @@
-function openBooking() {
-  document.getElementById('booking').classList.remove('hidden');
+function startBooking() {
+  document.getElementById("bookingCard").classList.remove("hidden");
+  document.getElementById("bookingCard").scrollIntoView({ behavior: "smooth" });
 }
 
 function confirmBooking() {
@@ -12,14 +13,15 @@ function confirmBooking() {
     child: child.value
   };
 
-  let bookings = JSON.parse(localStorage.getItem('bookings')) || [];
+  let bookings = JSON.parse(localStorage.getItem("bookings")) || [];
   bookings.push(booking);
-  localStorage.setItem('bookings', JSON.stringify(bookings));
+  localStorage.setItem("bookings", JSON.stringify(bookings));
 
-  document.getElementById('booking').classList.add('hidden');
-  document.getElementById('payment').classList.remove('hidden');
+  document.getElementById("bookingCard").classList.add("hidden");
+  document.getElementById("paymentCard").classList.remove("hidden");
 }
-const qr = localStorage.getItem('qr');
+
+const qr = localStorage.getItem("qr");
 if (qr) {
-  document.getElementById('qrImage').src = qr;
+  document.getElementById("qrImage").src = qr;
 }
