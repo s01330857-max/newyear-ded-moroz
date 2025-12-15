@@ -1,6 +1,10 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: 'Inter', Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', Arial;
   background: #0b1220;
   color: #fff;
 }
@@ -12,39 +16,48 @@ body {
 }
 
 .overlay {
-  background: rgba(0,0,0,0.55);
+  background: rgba(0,0,0,0.6);
   height: 100%;
+  padding: 24px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 20px;
 }
 
 h1 {
-  font-size: 40px;
-  max-width: 700px;
+  font-size: clamp(28px, 6vw, 42px);
+  margin-bottom: 10px;
 }
 
-button {
+p {
+  font-size: 16px;
+  max-width: 520px;
+}
+
+.trust {
+  font-size: 14px;
+  opacity: 0.85;
+  margin: 12px 0 20px;
+}
+
+/* BUTTON */
+.primary {
   background: linear-gradient(135deg, #ff3b3b, #ff9a3b);
   border: none;
-  padding: 14px 32px;
-  border-radius: 30px;
+  border-radius: 999px;
+  padding: 14px 34px;
   font-size: 16px;
-  cursor: pointer;
   color: #fff;
 }
 
-/* BENEFITS */
-.benefits {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 25px;
-  background: #111830;
+/* TEXT */
+.soft-text {
+  padding: 30px;
+  text-align: center;
   font-size: 15px;
+  opacity: 0.85;
 }
 
 /* CARD */
@@ -52,17 +65,32 @@ button {
   max-width: 420px;
   margin: 40px auto;
   background: #151c36;
-  border-radius: 20px;
-  padding: 25px;
+  border-radius: 22px;
+  padding: 24px;
 }
 
-.card input,
-.card select {
+.card h2 {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+/* FORM */
+input, select {
   width: 100%;
-  padding: 12px;
-  margin-bottom: 12px;
-  border-radius: 12px;
+  padding: 14px;
+  border-radius: 14px;
   border: none;
+  margin-bottom: 12px;
+  font-size: 15px;
+}
+
+.inline {
+  display: flex;
+  gap: 10px;
+}
+
+.full {
+  width: 100%;
 }
 
 .small {
@@ -74,8 +102,9 @@ button {
   display: none;
 }
 
-img {
-  width: 200px;
-  display: block;
-  margin: 20px auto;
+/* SNOW */
+#snow {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
 }
