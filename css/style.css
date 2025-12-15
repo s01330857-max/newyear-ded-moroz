@@ -74,10 +74,17 @@ p p {
 .card {
   max-width: 440px;
   margin: 50px auto;
-  background: #151c36;
-  border-radius: 26px;
   padding: 28px;
+  border-radius: 26px;
+
+  background: rgba(21, 28, 54, 0.55);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255,255,255,0.15);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.45);
 }
+
 
 .card h2 {
   text-align: center;
@@ -166,6 +173,7 @@ input, select {
   opacity: 0.85;
   text-align: center;
 }
+
 
 
 
